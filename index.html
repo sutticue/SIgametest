@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เกมคำอุปสรรค</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>เกมคำอุปสรรค</h1>
+        <div id="setup-container" class="setup-container">
+            <p>เลือกจำนวนคำถามที่ต้องการเล่น:</p>
+            <button class="setup-button" data-questions="5">5 ข้อ</button>
+            <button class="setup-button" data-questions="10">10 ข้อ</button>
+            <button class="setup-button" data-questions="15">15 ข้อ</button>
+        </div>
+        <div id="game-container" class="hidden">
+            <div id="score-box" class="score-box">คะแนน: 0</div>
+            <div id="timer-box" class="timer-box">เวลา: 0 วินาที</div>
+            <div id="question" class="question-box"></div>
+            <div class="answers-container">
+                <button class="answer-button" id="answer1">ตัวเลือก 1</button>
+                <button class="answer-button" id="answer2">ตัวเลือก 2</button>
+                <button class="answer-button" id="answer3">ตัวเลือก 3</button>
+                <button class="answer-button" id="answer4">ตัวเลือก 4</button>
+            </div>
+            <div id="result" class="result-box"></div>
+        </div>
+        <div id="summary-popup" class="hidden summary-popup">
+            <h2>ผลลัพธ์</h2>
+            <p id="summary-score"></p>
+            <button id="close-popup-button">ปิด</button>
+        </div>
+        <button id="start-over-button" class="hidden start-over-button">เริ่มใหม่</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

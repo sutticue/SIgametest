@@ -1,0 +1,154 @@
+/* สีธีมเข้ม โมเดิร์น */
+:root {
+    --bg-color: #1e1e2f;
+    --text-color: #ffffff;
+    --button-color: #ff6f61;
+    --button-hover-color: #ff4b3a;
+    --correct-color: #4caf50;
+    --wrong-color: #f44336;
+    --card-bg: #2b2b3c;
+    --border-color: #444455;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.hidden {
+    display: none;
+}
+
+.game-container {
+    text-align: center;
+    background: var(--card-bg);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    width: 90%;
+    max-width: 400px;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: var(--button-color);
+}
+
+.question-box {
+    font-size: 2em; /* ขนาดตัวหนังสือโจทย์ใหญ่ขึ้น */
+    margin-bottom: 30px;
+    padding: 15px;
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-weight: bold;
+    text-align: center; /* จัดให้อยู่ตรงกลาง */
+}
+
+.score-box, .timer-box {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: var(--text-color);
+}
+
+.answers-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* เพิ่มช่องว่างระหว่างตัวเลือก */
+}
+
+.answer-button {
+    padding: 15px; /* เพิ่มขนาดปุ่ม */
+    font-size: 1.5em; /* ขนาดตัวหนังสือใหญ่ขึ้น */
+    border: none;
+    border-radius: 8px;
+    background-color: var(--button-color);
+    color: var(--text-color);
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.answer-button:hover {
+    background-color: var(--button-hover-color);
+    transform: scale(1.05);
+}
+
+.result-box {
+    margin-top: 20px;
+    font-size: 1.5em;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.result-box.correct {
+    color: var(--correct-color);
+}
+
+.result-box.wrong {
+    color: var(--wrong-color);
+}
+
+.start-over-button {
+    margin-top: 20px;
+    padding: 15px 25px; /* ขนาดปุ่มใหญ่ขึ้น */
+    font-size: 1.2em;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--button-color);
+    color: var(--text-color);
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.start-over-button:hover {
+    background-color: var(--button-hover-color);
+    transform: scale(1.05);
+}
+
+/* Popup สรุปผล */
+.summary-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--card-bg);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    z-index: 1000;
+}
+
+.summary-popup h2 {
+    margin-bottom: 10px;
+    color: var(--button-color);
+}
+
+.summary-popup p {
+    margin-bottom: 20px;
+    font-size: 1.5em;
+}
+
+.summary-popup button {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--button-color);
+    color: var(--text-color);
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.summary-popup button:hover {
+    background-color: var(--button-hover-color);
+    transform: scale(1.05);
+}
